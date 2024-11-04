@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
     private float v;
     private float r;
 
+    public float moveSpeed = 8.0f;
+    public float turnSpeed = 500.0f;
+
     void Start()
     {
 
@@ -23,7 +26,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(moveDir.normalized * Time.deltaTime * 8.0f);
 
         // 회전 처리로직
-        transform.Rotate(Vector3.up * Time.deltaTime * r * 200.0f);
+        transform.Rotate(Vector3.up * Time.deltaTime * r * 500.0f);
     }
 }
 
