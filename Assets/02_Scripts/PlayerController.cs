@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
         // transform.position += Vector3.forward * 0.1f;
 
         transform.Translate(Vector3.forward * Time.deltaTime * v * 8.0f);
+        transform.Translate(Vector3.right * Time.deltaTime * h * 8.0f);
 
         // Debug.Log($"h={h} / v={v}");
     }
