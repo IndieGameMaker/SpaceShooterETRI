@@ -23,10 +23,10 @@ public class PlayerController : MonoBehaviour
         // 이동처리 로직
         // 벡터의 덧셈
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
-        transform.Translate(moveDir.normalized * Time.deltaTime * 8.0f);
+        transform.Translate(moveDir.normalized * Time.deltaTime * moveSpeed);
 
         // 회전 처리로직
-        transform.Rotate(Vector3.up * Time.deltaTime * r * 500.0f);
+        transform.Rotate(Vector3.up * Time.deltaTime * r * turnSpeed);
     }
 }
 
