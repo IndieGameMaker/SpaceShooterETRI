@@ -22,7 +22,8 @@ public class RemoveBullet : MonoBehaviour
             // 쿼터니언(Quaternion : 사원수 x, y, z, w)
 
             // 스파크 생성
-            Instantiate(sparkEffect, pos, rot);
+            var obj = Instantiate(sparkEffect, pos, rot);
+            Destroy(obj, 0.5f);
 
             Destroy(other.gameObject);
         }
